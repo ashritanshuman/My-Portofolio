@@ -250,14 +250,14 @@ body {
 }
 
 .navbar-links {
-    display: none;
+    display: flex;
     align-items: center;
     gap: var(--space-xl);
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
     .navbar-links {
-        display: flex;
+        display: none;
     }
 }
 
@@ -1372,14 +1372,9 @@ html {
     scroll-padding-top: 100px;
 }
 
-/* Initial body state - prevent layout shift */
+/* Initial body state - prevent layout shift, no fade */
 body {
     overflow-x: hidden;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-body.loaded {
     opacity: 1;
 }
 
