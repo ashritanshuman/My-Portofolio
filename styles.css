@@ -1,7 +1,3 @@
-/* ==========================================
-   ASHRIT ANSHUMAN PORTFOLIO - VANILLA CSS
-   ========================================== */
-
 /* CSS Variables */
 :root {
     --color-primary: #e9ffbc;
@@ -1177,6 +1173,15 @@ body {
     max-width: none;
 }
 
+.footer-container .footer-copyright #anisha {
+    text-align: center;
+}
+
+#anisha {
+    display: block;
+}
+
+
 @media (min-width: 768px) {
     .footer-container {
         flex-direction: row;
@@ -1217,9 +1222,9 @@ body {
     color: var(--color-primary-container);
 }
 
-/* ==========================================
-   RESPONSIVE
-   ========================================== */
+/* RESPONSIVE */
+
+
 @media (max-width: 480px) {
     .hero-title {
         font-size: 2.5rem;
