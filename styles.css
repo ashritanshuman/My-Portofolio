@@ -60,8 +60,11 @@ body {
 
 /* Selection */
 ::selection {
-    background-color: var(--color-primary-container);
-    color: var(--color-on-primary-container);
+    /* background-color: var(--color-primary-container);
+    color: var(--color-on-primary-container); */
+
+    background-color: rgb(223, 243, 111);
+    color: rgb(85, 90, 8);
 }
 
 /* Scrollbar */
