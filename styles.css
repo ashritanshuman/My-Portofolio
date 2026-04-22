@@ -1110,6 +1110,18 @@ body {
 .form-input::placeholder,
 .form-textarea::placeholder {
     color: var(--color-outline);
+    
+}
+
+.form-group input::placeholder{
+
+    padding: 20px;
+
+    /* margin-right: 10px; */
+    /* padding: 20px; */
+
+    /* margin: 10px; */
+
 }
 
 .form-input:focus,
