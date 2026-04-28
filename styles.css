@@ -1184,6 +1184,11 @@ body {
     display: block;
 }
 
+#codee{
+    display: block;
+    text-align: center;
+}
+
 
 @media (min-width: 768px) {
     .footer-container {
