@@ -1109,6 +1109,7 @@ body {
     font-size: 0.875rem;
     text-transform: uppercase;
     transition: border-color 0.2s ease;
+    border-radius: 10px;
 }
 
 .form-input::placeholder,
