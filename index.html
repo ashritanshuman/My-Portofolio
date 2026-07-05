@@ -31,8 +31,8 @@
                 </div>
                 <button class="btn-hire">HIRE ME</button>
             </div>
-            <div class="mobile-menu-icon">
-                <span class="material-symbols-outlined">menu</span>
+            <div class="mobile-menu-icon" aria-label="Toggle menu" role="button" tabindex="0" aria-expanded="false">
+                <span class="material-symbols-outlined" id="menuIcon">menu</span>
             </div>
         </div>
     </nav>
@@ -75,67 +75,70 @@
             <div class="section-header">
                 <div>
                     <h2 class="section-title">PROJECT LOGS</h2>
-                    <p class="section-subtitle">SELECTED ARCHITECTURES (2022-2024)</p>
+                    <p class="section-subtitle">SELECTED ARCHITECTURES (2025-2026)</p>
                 </div>
                 <div class="section-meta">
-                    <p class="meta-text">TOTAL DEPLOYMENTS: 4</p>
+                    <p class="meta-text">TOTAL DEPLOYMENTS: 3</p>
                 </div>
             </div>
             <div class="bento-grid">
-                <!-- Project 1 -->
-                <div class="project-card project-large">
+                <!-- Project 1: Study Group Finder -->
+                <div class="project-card project-wide">
                     <div class="project-header">
-                        <span class="project-tag">01 / ML ENGINE</span>
+                        <span class="project-tag">01 / FULL STACK</span>
                         <span class="material-symbols-outlined project-arrow">north_east</span>
                     </div>
-                    <h3 class="project-title">Lorem ipsum dolor sit.</h3>
-                    <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, ab.</p>
+                    <p class="project-date">September 2025</p>
+                    <h3 class="project-title">Study Group Finder</h3>
+                    <ul class="project-highlights">
+                        <li>Developed a full-stack student collaboration platform that enables users to discover and connect with study groups based on shared academic interests and learning goals.</li>
+                        <li>Implemented secure user authentication, profile management, group discovery, and group creation workflows to streamline peer-to-peer academic collaboration.</li>
+                        <li>Designed a responsive and intuitive user interface with reusable components, ensuring a consistent experience across desktop and mobile devices.</li>
+                        <li>Integrated real-time cloud data management and authentication to support dynamic user profiles, group information, and scalable application workflows.</li>
+                    </ul>
                     <div class="project-tags">
-                        <span class="tech-tag">PYTHON</span>
-                        <span class="tech-tag">PYTORCH</span>
-                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">Firebase</span>
                     </div>
                 </div>
-                <!-- Project 2 -->
-                <div class="project-card project-small">
+                <!-- Project 2: PathGen -->
+                <div class="project-card project-wide">
                     <div class="project-header">
-                        <span class="project-tag">02 / NLP</span>
+                        <span class="project-tag">02 / AI EDTECH</span>
                         <span class="material-symbols-outlined project-arrow">north_east</span>
                     </div>
-                    <h3 class="project-title-small text-accent">Lorem, ipsum.</h3>
-                    <p class="project-description-small">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate nobis minima modi.</p>
-                    <div class="project-hash-tags">
-                        <span class="hash-tag">#TRANSFORMERS</span>
-                        <span class="hash-tag">#KAFKA</span>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="project-card project-small-alt">
-                    <div class="project-header">
-                        <span class="project-tag">03 / VISUALS</span>
-                        <span class="material-symbols-outlined project-arrow">north_east</span>
-                    </div>
-                    <h3 class="project-title-small">LORME2
-
-                    </h3>
-                    <p class="project-description-small">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio.</p>
-                    <div class="project-hash-tags">
-                        <span class="hash-tag">D3.JS</span>
-                        <span class="hash-tag">STATS</span>
-                    </div>
-                </div>
-                <!-- Project 4 -->
-                <div class="project-card project-large">
-                    <div class="project-header">
-                        <span class="project-tag">04 / ARCHITECTURE</span>
-                        <span class="material-symbols-outlined project-arrow">north_east</span>
-                    </div>
-                    <h3 class="project-title">Lorem, ipsum dolor.</h3>
-                    <p class="project-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, quos?</p>
+                    <p class="project-date">January 2026</p>
+                    <h3 class="project-title">PathGen — Skills Roadmap Generator</h3>
+                    <ul class="project-highlights">
+                        <li>Developed an AI-powered learning roadmap platform that generates structured and personalized learning paths based on users' target skills and career roles.</li>
+                        <li>Structured learning journeys into progressive stages with curated resources and estimated learning timelines, enabling users to follow goal-oriented technical roadmaps.</li>
+                        <li>Designed skill-based and role-based roadmap discovery for technologies and career paths including Python, React, Docker, DevOps, AI/ML Engineering, and Data Science.</li>
+                        <li>Built a responsive, modern user interface with roadmap exploration, search functionality, dark/light theme support, and intuitive navigation across technical learning paths.</li>
+                    </ul>
                     <div class="project-tags">
-                        <span class="tech-tag">PYTHON</span>
-                        <span class="tech-tag">JAVA</span>
-                        <span class="tech-tag">BLUEHOST</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+                <!-- Project 3: Skillora AI -->
+                <div class="project-card project-wide">
+                    <div class="project-header">
+                        <span class="project-tag">03 / AI TOOL</span>
+                        <span class="material-symbols-outlined project-arrow">north_east</span>
+                    </div>
+                    <p class="project-date">February 2026</p>
+                    <h3 class="project-title">Skillora AI — AI-Powered Resume Builder</h3>
+                    <ul class="project-highlights">
+                        <li>Developed an AI-powered resume-building platform that enables users to create structured and professional resumes through an intuitive, guided interface.</li>
+                        <li>Implemented dynamic resume customization and real-time preview functionality, allowing users to efficiently edit and visualize resume content.</li>
+                        <li>Integrated AI-assisted content generation to help users improve resume sections, refine descriptions, and create impactful, role-specific content.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">OpenRouter AI API</span>
                     </div>
                 </div>
             </div>
@@ -160,12 +163,12 @@
                         <div class="core-glow"></div>
                         <div class="core-dot"></div>
                     </div>
-                    <img alt="" class="about-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgPdrRJJZVpxXZChKIO-zCrcCpCQv5LWJAbZzwqHFQ3zJOc3pRimqz_C3egCO22weZl0BBOzLxojGkdJJLNPzjhdwcA2tpyRIOca8Vsae_ds90yBydELKPiMiQDsyx0WoxdysHC8s8DvZb24bz1ChrW16WVsurrHgNIeXgzVJbvBlnHJZAKQ5AF-LbH9ep4M78Haa2DUhIRShBDI3-dRrI5wA_AittZQlWN63ux6XK4z2qq8CT3wdNjowBkhc2wMWuIJQhI17y2mM" />
+
                 </div>
                 <div class="about-content">
                     <h2 class="about-title">About<br/>me</h2>
                     <div class="about-text">
-                        <p>I'm Ashrit Anshuman Pradhan, a CSE student passionate about Technology, Data, & Innovation. My journey focouses on <span class="text-white bold">DS & ML</span> and <span class="text-white bold">Full Stack Development</span> through practical peojects that allows me to approach data not just as numbers, but as physical signals waiting to be interpreted.</p>
+                        <p>I'm Ashrit Anshuman Pradhan, a CSE student passionate about Technology, Data, & Innovation. My journey focuses on <span class="text-white bold">DS & ML</span> and <span class="text-white bold">Full Stack Development</span> through practical projects that allow me to approach data not just as numbers, but as physical signals waiting to be interpreted.</p>
                         <p>Currently focusing on building Real World Projects.....</p>
                     </div>
                     <div class="competencies">
@@ -184,7 +187,7 @@
     </section>
 
     <!-- Methodology Section -->
-    <!-- <section class="methodology" id="process">
+    <section class="methodology" id="process">
         <div class="container">
             <div class="methodology-grid">
                 <div class="method-card">
@@ -204,7 +207,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- Testimonial Section -->
     <!-- <section class="testimonial">
@@ -245,10 +248,10 @@
                             <label class="form-label">EMAIL ADDRESS</label>
                             <input class="form-input" placeholder="ALEXMURPHY@MAIL.COM" type="email" id="emailAddress" required />
                         </div>
-                        <!-- <div class="form-group">
-                            <label class="form-label">MESSAGE_PAYLOAD</label>
-                            <textarea class="form-textarea" placeholder="   DESCRIBE YOUR CHALLENGE..." rows="4" id="messagePayload" required></textarea>
-                        </div> -->
+                        <div class="form-group">
+                            <label class="form-label">MESSAGE</label>
+                            <textarea class="form-textarea" placeholder="DESCRIBE YOUR CHALLENGE..." rows="4" id="messagePayload" required></textarea>
+                        </div>
                         <button type="submit" class="form-submit">SEND MESSAGE</button>
                     </form>
                 </div>
@@ -261,9 +264,9 @@
         <div class="footer-container">
             <div class="footer-logo">ASHRIT ANSHUMAN PORTFOLIO</div>
             <div class="footer-links">
-                <a class="footer-link" href="https://github.com/ashritanshuman">GITHUB</a>
-                <a class="footer-link" href="https://www.linkedin.com/in/ashritanshuman/">LINKEDIN</a>
-                <a class="footer-link" href="https://www.kaggle.com/ashritanshuman">KAGGLE</a>
+                <a class="footer-link" href="https://github.com/ashritanshuman" rel="noopener noreferrer" target="_blank">GITHUB</a>
+                <a class="footer-link" href="https://www.linkedin.com/in/ashritanshuman/" rel="noopener noreferrer" target="_blank">LINKEDIN</a>
+                <a class="footer-link" href="https://www.kaggle.com/ashritanshuman" rel="noopener noreferrer" target="_blank">KAGGLE</a>
             </div>
             <!-- <div class="footer-copyright">©2026 // ASHRIT ANSHUMAN // MADE WITH LOVE FOR <br> <b id="anisha">ANISHA MA'AM🥰😘</b> </div> -->
             <div class="footer-copyright">©2026 | ASHRIT ANSHUMAN <br> <span id="codee"style="font-size:10px;" style="font-weight: 820px;" >MADE WITH LOVE & <b>CODE</b> <span><\></span> </span>  </div>

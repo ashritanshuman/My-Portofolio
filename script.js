@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const userName = document.getElementById('userName').value.trim();
             const emailAddress = document.getElementById('emailAddress').value.trim();
-            const messagePayload = document.getElementById('messagePayload').value.trim();
+            const messagePayload = document.getElementById('messagePayload')?.value.trim();
             
             if (!userName || !emailAddress || !messagePayload) {
                 alert('Please fill in all fields.');
@@ -66,13 +66,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
             submitButton.textContent = 'SENDING...';
             submitButton.disabled = true;
             
             setTimeout(() => {
                 alert('Message sent successfully!');
                 contactForm.reset();
-                submitButton.textContent = 'SEND_MESSAGE //';
+                submitButton.textContent = originalText;
                 submitButton.disabled = false;
             }, 1500);
         });
@@ -128,21 +129,33 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
     const navbarLinks = document.querySelector('.navbar-links');
+    const menuIconSymbol = document.getElementById('menuIcon');
     let menuOpen = false;
+    
+    function setMenuIcon(open) {
+        if (menuIconSymbol) {
+            menuIconSymbol.textContent = open ? 'close' : 'menu';
+        }
+        if (mobileMenuIcon) {
+            mobileMenuIcon.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+    }
     
     // Initialize mobile menu state
     function initMobileMenu() {
         if (window.innerWidth < 768) {
             navbarLinks.style.display = 'none';
+            setMenuIcon(false);
         } else {
             navbarLinks.style.display = '';
+            setMenuIcon(false);
         }
     }
     
     initMobileMenu();
     
     if (mobileMenuIcon && navbarLinks) {
-        mobileMenuIcon.addEventListener('click', function() {
+        function toggleMenu() {
             menuOpen = !menuOpen;
             
             if (menuOpen) {
@@ -159,6 +172,17 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 navbarLinks.style.display = 'none';
             }
+            setMenuIcon(menuOpen);
+        }
+        
+        mobileMenuIcon.addEventListener('click', toggleMenu);
+        
+        // Keyboard accessibility for the menu trigger
+        mobileMenuIcon.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
         });
         
         // Close menu on link click
@@ -168,6 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (window.innerWidth < 768) {
                     navbarLinks.style.display = 'none';
                 }
+                setMenuIcon(false);
             });
         });
         
@@ -176,8 +201,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (window.innerWidth >= 768) {
                 navbarLinks.removeAttribute('style');
                 menuOpen = false;
+                setMenuIcon(false);
             } else if (!menuOpen) {
                 navbarLinks.style.display = 'none';
+                setMenuIcon(false);
             }
         });
     }
