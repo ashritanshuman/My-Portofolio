@@ -1,2 +1,1 @@
-### Personal Portfolio of Ashrit Anshuman
-### made using HTML CSS & JS..
+### Portfolio of Ashrit Anshuman Pradhan
